@@ -269,7 +269,7 @@ function openApp(browser)
      
   }
   if(browser==0){ Telegram.WebApp.openLink(link2open,{try_instant_view:false});}
-  else if(link2open.includes('mc2025.mc') ){  link2open.replace('http://mc2025.mc/','https://movizbot.github.io/a/');  Telegram.WebApp.openLink(link2open,{try_browser:br[browser]});}
+  else if(link2open.includes('mc2025.mc') ){link2open= link2open.replace('http://mc2025.mc/','https://movizbot.github.io/a/');  Telegram.WebApp.openLink(link2open,{try_browser:br[browser]});}
   else{ Telegram.WebApp.openLink(link2open,{try_browser:br[browser]});  }
   
 }
