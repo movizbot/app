@@ -153,9 +153,10 @@ function shareMovie(e)
   { let d=new Date(uu.vidshare);let now=new Date(); 
     
     alert( uu.vidshare.toString()+' vidshare '+ d.toString() + ' d  '+ now.toString()  );
-    
+    alert( d.getTime()+' d.getTime    +'+ now.getTime()  +' now.getTime()   +'+  (d.getTime()- now.getTime() ).toString()+' subtraction +'); 
     if(d.getTime()- now.getTime() > 86000000)
-  { uu.vidshare=new Date().toString();
+  { alert(' true +');
+    uu.vidshare=new Date().toString();
     uu.TaskCoins += 500000; savedebug();
   }
   }    
