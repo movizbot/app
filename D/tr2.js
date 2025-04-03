@@ -150,7 +150,10 @@ function shareMovie(e)
     uu.TaskCoins += 500000; savedebug();
   }
   else
-  { let d=new Date(uu.vidshare);let now=new Date(); if(d.getTime()- now.getTime() > 86000000)
+  { let d=new Date(uu.vidshare);let now=new Date(); 
+    
+    alert( uu.vidshare.toString()' vidshare '+ d.toString() + ' d  '+ now.toString()  );
+    if(d.getTime()- now.getTime() > 86000000)
   { uu.vidshare=new Date().toString();
     uu.TaskCoins += 500000; savedebug();
   }
