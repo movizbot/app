@@ -143,7 +143,7 @@ function shareMovie(e)
  for(let i=0;i<lis.length;i++){ if(lis[i].Hid ==e.name){ Index=i;tit=lis[i].Tit; break; }   }
  let param= "https://t.me/share/url?url="+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=You've got to watch or download this amazing movie ( "+tit+" ) and start earning $Moviz today.";
   
-  Telegram.WebApp.openTelegramLink(param);
+ // Telegram.WebApp.openTelegramLink(param);
   if(  uu.vidshare.length < 5)
   {   
     uu.vidshare=new Date().toString();
@@ -152,7 +152,8 @@ function shareMovie(e)
   else
   { let d=new Date(uu.vidshare);let now=new Date(); 
     
-    alert( uu.vidshare.toString()' vidshare '+ d.toString() + ' d  '+ now.toString()  );
+    alert( uu.vidshare.toString()+' vidshare '+ d.toString() + ' d  '+ now.toString()  );
+    
     if(d.getTime()- now.getTime() > 86000000)
   { uu.vidshare=new Date().toString();
     uu.TaskCoins += 500000; savedebug();
