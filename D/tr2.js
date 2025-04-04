@@ -550,11 +550,11 @@ async function getQuery(isref=false)
   
     if(uu.Ref === 'q')
     {
-     alert(Params);
+     //alert(Params);
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
-      alert(Params);
-      if(refcode.includes('-')) refcode=refcode.slice(0,indexOf('-'));
-      alert(Params);
+      alert(refcode);
+      if(refcode.includes('-')) refcode=refcode.slice(0,refcode.indexOf('-'));
+      alert(refcode);
     let code=getrefcode();uu.refId= code;
       alert('getrefcode();');
     if(!code.includes(refcode))
