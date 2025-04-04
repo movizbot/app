@@ -557,7 +557,7 @@ async function getQuery(isref=false)
       alert(refcode);
     let code=getrefcode();uu.refId= code;
       alert('getrefcode();');
-    if(!code.includes(refcode))
+    //if(! code.includes(refcode))
       {uu.Ref= refcode;
         alert('sending ref  ');
       sendMsg(code+'===='+refcode );
