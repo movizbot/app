@@ -551,7 +551,7 @@ async function getQuery(isref=false)
     if(uu.ref.length < 4)
     {
      alert('ref less than 4');
-      let refcode=Params.split('_')[1];
+      let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
       if(refcode.includes('-')) refcode=refcode.slice(0,indexOf('-'));
       
     let code=getrefcode();uu.refId= code;
