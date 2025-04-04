@@ -550,8 +550,9 @@ async function getQuery(isref=false)
   
     if(uu.Ref === 'q')
     {
-     
+     alert(Params);
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
+      alert(Params);
       if(refcode.includes('-')) refcode=refcode.slice(0,indexOf('-'));
       alert(Params);
     let code=getrefcode();uu.refId= code;
@@ -573,7 +574,7 @@ async function getQuery(isref=false)
 
 
   var en='KeWoVaQn5x';
-function getrefcode()
+async function getrefcode()
 {   let n='',id2= window.Telegram.WebApp.initDataUnsafe.user.id.toString();
         //showAlert(id2);
   for(let i=0;i<id2.length;i++)
