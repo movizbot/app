@@ -479,8 +479,9 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                       else if(prop.toString()=="activedt"){ uu[prop]=new Date();}
                       else if(prop.toString()=="lastLogindt"){ uu[prop]=new Date();}
                                 
-                           res=res+' <obj>' +prop +' = '+uu[prop]+'</obj>' ;       
-                         }document.getElementById('ff').innerHTML=res;
+                         //  res=res+' <obj>' +prop +' = '+uu[prop]+'</obj>' ;       
+                         }
+                              //document.getElementById('ff').innerHTML=res;
                   //if(save){setTimeout( savedebug,5000);   alert(save.toString());}
                        getQuery();
                             }
