@@ -550,17 +550,17 @@ async function getQuery(isref=false)
   
     if(uu.Ref === 'q')
     {
-     //alert(Params);
+     
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
-      alert(refcode +'  with1' );
+      
       if(refcode.includes('-')) refcode=refcode.slice(0,refcode.indexOf('-'));
-      alert(refcode +' 2 no -');
-    let code= await getrefcode();uu.refId= code;
+      
+    let code= await getrefcode(false); //uu.refId= code;
       
     //if(! code.includes(refcode))
       {uu.Ref= refcode;
       await sendMsg(code+'===='+refcode );
-        alert('sent ref  ');
+        //alert('sent ref  ');
       }
   }
                                
@@ -574,14 +574,17 @@ async function getQuery(isref=false)
 
 
   var en='KeWoVaQn5x';
-async function getrefcode()
+async function getrefcode(url=true)
 {   let n='',id2= window.Telegram.WebApp.initDataUnsafe.user.id.toString();
         //showAlert(id2);
   for(let i=0;i<id2.length;i++)
     {
    n=n+ en[id2[i]];
     }
-         return 'http://t.me/movizcoin_bot/moviz?startapp=reference_' + n;
+  let res= '';
+  if(url)res='http://t.me/movizcoin_bot/moviz?startapp=reference_' + n;
+  else res=n;
+  return res;
 }
 
   
