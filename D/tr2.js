@@ -548,6 +548,7 @@ async function getQuery(isref=false)
   showAlert(error);
 });
      }
+  alert('ref start');
     if(uu.ref.length < 4)
     {
      alert('ref less than 4');
