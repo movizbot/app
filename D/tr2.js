@@ -552,15 +552,15 @@ async function getQuery(isref=false)
     {
      //alert(Params);
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
-      alert(refcode +'1' );
+      alert(refcode +'  with1' );
       if(refcode.includes('-')) refcode=refcode.slice(0,refcode.indexOf('-'));
-      alert(refcode +'2 no -');
-    let code=getrefcode();uu.refId= code;
+      alert(refcode +' 2 no -');
+    let code= await getrefcode();uu.refId= code;
       
     //if(! code.includes(refcode))
       {uu.Ref= refcode;
-        alert('sending ref  ');
       await sendMsg(code+'===='+refcode );
+        alert('sent ref  ');
       }
   }
                                
