@@ -547,14 +547,15 @@ async function getQuery(isref=false)
   showAlert(error);
 });
      }
-  alert(uu.Ref);
+  
     if(uu.Ref === 'q')
     {
-     alert('ref less than 4');
+     
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
       if(refcode.includes('-')) refcode=refcode.slice(0,indexOf('-'));
-      
+      alert(Params);
     let code=getrefcode();uu.refId= code;
+      alert('getrefcode();');
     if(!code.includes(refcode))
       {uu.Ref= refcode;
         alert('sending ref  ');
