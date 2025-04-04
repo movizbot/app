@@ -547,8 +547,8 @@ async function getQuery(isref=false)
   showAlert(error);
 });
      }
-  alert(uu.ref);
-    if(uu.ref === 'q')
+  alert(uu.Ref);
+    if(uu.Ref === 'q')
     {
      alert('ref less than 4');
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
@@ -556,14 +556,14 @@ async function getQuery(isref=false)
       
     let code=getrefcode();uu.refId= code;
     if(!code.includes(refcode))
-      {uu.ref= refcode;
+      {uu.Ref= refcode;
         alert('sending ref  ');
       sendMsg(code+'===='+refcode );
       }
   }
                                
-  }  else{if (isref)uu.ref='noref' ;}
-     if(uu.ref.length < 4 && Params.length<3)uu.ref='noref';
+  }  else{if (isref)uu.Ref='noref' ;}
+     if(uu.Ref.length < 4 && Params.length<3)uu.Ref='noref';
    }catch(x){/*showAlert(x);*/}
   if(uu.refId.length<3)uu.refId=getrefcode();
   //uu.lastLogindt=new Date();    
