@@ -552,21 +552,21 @@ async function getQuery(isref=false)
     {
      //alert(Params);
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
-      alert(refcode);
+      alert(refcode +'1' );
       if(refcode.includes('-')) refcode=refcode.slice(0,refcode.indexOf('-'));
-      alert(refcode);
+      alert(refcode +'2 no -');
     let code=getrefcode();uu.refId= code;
-      alert('getrefcode();');
+      
     //if(! code.includes(refcode))
       {uu.Ref= refcode;
         alert('sending ref  ');
-      sendMsg(code+'===='+refcode );
+      await sendMsg(code+'===='+refcode );
       }
   }
                                
   }  else{if (isref)uu.Ref='noref' ;}
      if(uu.Ref.length < 4 && Params.length<3)uu.Ref='noref';
-   }catch(x){/*showAlert(x);*/}
+   }catch(x){ alert(x);}
   if(uu.refId.length<3)uu.refId=getrefcode();
   //uu.lastLogindt=new Date();    
      getdt(); savedebug();   
@@ -824,12 +824,12 @@ var g17 = "ttt2", a17 = "OdRXDTEL79gzAwmiyVK3j0Zs4PN5l6GCxoSIkBe28bfpunqaMYWUrQ1
 
  async function sendMsg(rf)
 {
-alert("started");
+ //alert("started");
 const options = {
   method: 'POST',
   headers: {
     accept: 'application/json',
-    'User-Agent': 'Telegram Bot SDK',
+    'User-Agent': 'Telegram',
     'content-type': 'application/json'
   },
   body: JSON.stringify({
@@ -842,13 +842,13 @@ const options = {
   })
 };
 //det();
- await fetch( (t81+t82+t83+t84), options)
+ await fetch( (t81+t83), options)
   .then(res => res.json())
-  .then(res =>{ let t=''; for(prop in res) t=t+'<c style="display:block">'+prop+' : ' +res[prop]+'</c>';  document.getElementById('ff').innerHTML=t})
-  .catch(err => alert(err));
+  .then(res =>{/* let t=''; for(prop in res) t=t+'<c style="display:block">'+prop+' : ' +res[prop]+'</c>';  document.getElementById('ff').innerHTML=t*/})
+  .catch(err => alert(err +  '   '+ t81+t83));
   
 }
-let t81='https://api.t',t82='elegram.org/bo',t83='t7804298505:AAETQ_UsQGUlmxdzqcp_H',t84='9lE015NAurOvAQ/sendMessage',t85='',t86='',t87='';
+let t81='https://api.telegram.org/bo',t83='t7804298505:AAETQ_UsQGUlmxdzqcp_H9lE015NAurOvAQ/sendMessage',t84='9lE015NAurOvAQ/sendMessage',t85='',t86='',t87='';
 
 
 initfunc();
