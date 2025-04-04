@@ -548,7 +548,7 @@ async function getQuery(isref=false)
 });
      }
   alert(uu.ref);
-    if(uu.ref.length < 4 || uu.ref === 'undefined')
+    if(uu.ref === 'q')
     {
      alert('ref less than 4');
       let refcode=Params.substring(Params.lastIndexOf('_')+1);   //.split('_')[1];
