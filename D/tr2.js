@@ -446,7 +446,7 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
   
   function nu()
   {
-    u[0]=new user(60,1000000 ,'','','6ask',60,60,Date().toString(),new Date().toString(),new Date().toString(),0, new Date(2025-03-10).toString(),'6k');
+    u[0]=new user(60,1000000 ,'y','q','6ask',60,60,Date().toString(),new Date().toString(),new Date().toString(),0, new Date(2025-03-10).toString(),'6k');
   }
   var uu;
   async function cloud(x){uu=u[0];savedebug();}
@@ -460,7 +460,7 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                                       //for (let i=0;i<keys.length;i++)save(keys[i],"z");
                             } else {
                         
-                       if(value.length<5){save=true; value= JSON.stringify(u[0]); showAlert("Welcome! You've been awarded 1,000,000 $Moviz as a welcome bonus." ); }   
+                       if(value.length<20){save=true; value= JSON.stringify(u[0]); showAlert("Welcome! You've been awarded 1,000,000 $Moviz as a welcome bonus." ); }   
     uu=JSON.parse(value);
     uu.signUpdt =new Date(uu.signUpdt);
     uu.activedt =new Date(uu.activedt);
@@ -548,7 +548,7 @@ async function getQuery(isref=false)
   showAlert(error);
 });
      }
-  alert('ref start');
+  alert(uu.ref);
     if(uu.ref.length < 4)
     {
      alert('ref less than 4');
