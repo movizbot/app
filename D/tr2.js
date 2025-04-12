@@ -141,7 +141,8 @@ function shareMovie(e)
 {
   let Index=0,tit="";
  for(let i=0;i<lis.length;i++){ if(lis[i].Hid ==e.name){ Index=i;tit=lis[i].Tit; break; }   }
- let param= "https://t.me/share/url?url="+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=You've got to watch or download this amazing movie ( "+tit+" ) and start earning $Moviz today.";
+ //let param= "https://t.me/share/url?url="+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=You've got to watch or download this amazing movie ( "+tit+" ) and start earning $Moviz today.";
+  let param=tit +"-"+lis[i].Lid +"-"+  lis[i].Length +"-"+lis[i].HSize+"-"+lis[i].LSize+"-"+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=title";
   
  Telegram.WebApp.openTelegramLink(param);
   if(  uu.vidshare.length < 5)
@@ -162,7 +163,7 @@ function shareMovie(e)
 }
 
 function showmovie(e)
-{l
+{
      movieUrl=e.id; TaskId="";
       if(e.id.includes("://hd"))    
   { moviePage= "https://hdmania2.net/showmovie.php?id=" +e.name;   
@@ -568,7 +569,7 @@ async function getQuery(isref=false)
   }  else{if (isref)uu.Ref='noref' ;}
      if(uu.Ref.length < 4 && Params.length<3)uu.Ref='noref';
    }catch(x){ alert(x);}
-  if(uu.refId.length<3)uu.refId=getrefcode();
+  if(uu.refId.length<3)uu.refId= await getrefcode();
   //uu.lastLogindt=new Date();    
      getdt(); savedebug();   
 }
@@ -787,7 +788,7 @@ function get(url){
 
  function gtim(str)
 {
-  let p= "http://daib.github.io/P/img/"+str+".jpg";
+  let p=  " ";  //"http://daib.github.io/P/img/"+str+".jpg";
   return p;
 }
  
