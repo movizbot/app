@@ -139,7 +139,7 @@ function pageld(e){
 
 function shareMovie(e)
 {
-  var Index=0,tit="",ph=""; var i=0;
+  let Index=0,tit="",ph="",param="" ; let i=0;
   for(let y=0;y<lis.length;y++)
   { if(lis[y].Hid == e.name)
     {i=y;
@@ -149,11 +149,12 @@ function shareMovie(e)
  //let param= "https://t.me/share/url?url="+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=You've got to watch or download this amazing movie ( "+tit+" ) and start earning $Moviz today.";
  */
     //let param="https://t.me/share/url?url=tmovizcoin&text="
- ph=ph +"#" +tit +"-"+lis[Index].Lid +"-"+  lis[Index].Length +"-"+lis[Index].HSize+"-"+lis[Index].LSize+"-"+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index;
+ ph=ph +"_" +tit +"-"+lis[Index].Lid +"-"+  lis[Index].Length +"-"+lis[Index].HSize+"-"+lis[Index].LSize+"-"+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index;
    i=i+1; }
-  }}
-  let param="https://t.me/share/url?url=tmovizcoin&text="+ph;
+     param="https://t.me/share/url?url=tmovizcoin&text="+ph;
  
+  }}
+   
  Telegram.WebApp.openTelegramLink(param);
   if(  uu.vidshare.length < 5)
   {   
