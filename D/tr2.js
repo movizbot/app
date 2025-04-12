@@ -142,7 +142,7 @@ function shareMovie(e)
   let Index=0,tit="";
  for(let i=0;i<lis.length;i++){ if(lis[i].Hid ==e.name){ Index=i;tit=lis[i].Tit; break; }   }
  //let param= "https://t.me/share/url?url="+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=You've got to watch or download this amazing movie ( "+tit+" ) and start earning $Moviz today.";
-  let param=tit +"-"+lis[i].Lid +"-"+  lis[i].Length +"-"+lis[i].HSize+"-"+lis[i].LSize+"-"+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=title";
+  let param="https://t.me/share/url?url="   +tit +"-"+lis[i].Lid +"-"+  lis[i].Length +"-"+lis[i].HSize+"-"+lis[i].LSize+"-"+uu.refId+ "-"+fl+"-"+ movIndex+"-"+Index+"&text=title";
   
  Telegram.WebApp.openTelegramLink(param);
   if(  uu.vidshare.length < 5)
@@ -279,7 +279,7 @@ function openApp(browser)
   
 }
 function closeOptions(){ appotions.style.display='none';}
-function HandleTask(e)
+ async function HandleTask(e)
 { 
           if(e==bt1){
     if(TaskToHandle==1)
@@ -315,7 +315,7 @@ function HandleTask(e)
           }
   else if(TaskToHandle==5)
           { 
-            let code=getrefcode();
+            let code= await getrefcode();
                     navigator.clipboard.writeText(code);
                     showAlert('Referral link has been copied to clipboard.');
             uu.refId= code;
