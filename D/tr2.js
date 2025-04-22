@@ -286,6 +286,7 @@ function openApp(browser)
             }else{ showAlert("Not enough Task $Moviz. Watch ad or carryout some other tasks and try again." ); return;}
      
   }
+  
   if(browser==0){ Telegram.WebApp.openLink(link2open,{try_instant_view:false});}
   else if(link2open.includes('mc2025.mc') ){link2open= link2open.replace('http://mc2025.mc/','https://movizbot.github.io/a');  Telegram.WebApp.openLink(link2open,{try_browser:br[browser]});}
   else{ Telegram.WebApp.openLink(link2open,{try_browser:br[browser]});  }
@@ -310,7 +311,7 @@ function closeOptions(){ appotions.style.display='none';}
 
             //let str= JSON.stringify(uu);
          savedebug();
-            let st="http://mc2025.mc/?action="+ "mbadsd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
+            let st="https://movizbot.github.io/a/?action="+ "mbadsd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
             //let st="<a href='intent://mc2025.mc/ytvid#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
       link2open=st;closeapp=true;
           }   
@@ -353,7 +354,7 @@ function closeOptions(){ appotions.style.display='none';}
 
             //let str= JSON.stringify(uu);
          savedebug();
-            let st="http://mc2025.mc/?action=ytvidd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
+            let st="https://movizbot.github.io/a/?action=ytvidd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
            link2open=st; closeapp=true;
           }   
           else
